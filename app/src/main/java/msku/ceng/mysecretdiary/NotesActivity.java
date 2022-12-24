@@ -6,39 +6,38 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
 
-public class SignInActivity extends AppCompatActivity {
-    private Button button;
-    private TextView dontHaveAccText;
+public class NotesActivity extends AppCompatActivity {
+
+    private ImageView noteBoxImage;
+    private ImageView logOutImage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_notes);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-
-        button = findViewById(R.id.signInButton);
-        dontHaveAccText = findViewById(R.id.dontHaveAccText);
-        button.setOnClickListener(new View.OnClickListener() {
+        logOutImage = findViewById(R.id.logOutButton);
+        noteBoxImage = findViewById(R.id.noteBoxView);
+        noteBoxImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),MainActivity.class);
+                Intent intent = new Intent(v.getContext(),DeleteUpdateActivity.class);
                 startActivity(intent);
             }
         });
-
-        dontHaveAccText.setOnClickListener(new View.OnClickListener() {
+        logOutImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),SignUpActivity.class);
+                Intent intent = new Intent(v.getContext(),SignInActivity.class);
                 startActivity(intent);
             }
         });
-
     }
+
 }

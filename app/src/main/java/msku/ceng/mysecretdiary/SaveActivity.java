@@ -7,22 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class SaveActivity extends AppCompatActivity {
     private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_save);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-        button = findViewById(R.id.enterButton);
+
+        button = findViewById(R.id.save);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),DeletedNoteActivity.class);
+                Intent intent = new Intent(v.getContext(),NotesActivity.class);
                 startActivity(intent);
             }
         });
