@@ -35,4 +35,15 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    //Room Database
+    implementation "androidx.room:room-runtime:2.4.0-alpha03"
+    annotationProcessor "androidx.room:room-compiler:2.4.0-alpha03"
+
+    // Android Architecture Components
+    def lifecycle_version = "2.3.1"
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+
 }

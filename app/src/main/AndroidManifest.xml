@@ -10,25 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySecretDiary">
         <activity
-            android:name=".DeletedNoteActivity"
+            android:name=".Activity.DeletedNoteActivity"
             android:exported="false" />
         <activity
-            android:name=".DeleteUpdateActivity"
+            android:name=".Activity.DeleteUpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".SaveActivity"
+            android:name=".Activity.SaveActivity"
             android:exported="false" />
         <activity
-            android:name=".NotesActivity"
+            android:name=".Activity.NotesActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".Activity.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

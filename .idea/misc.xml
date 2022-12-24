@@ -3,23 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/custom_input.xml" value="0.156" />
-        <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.3105" />
-        <entry key="app/src/main/res/layout/activity_delete_update.xml" value="0.24003623188405798" />
-        <entry key="app/src/main/res/layout/activity_deleted_note.xml" value="0.24003623188405798" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_notes.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_save.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.31875" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.31875" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/layout/activity_notes.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

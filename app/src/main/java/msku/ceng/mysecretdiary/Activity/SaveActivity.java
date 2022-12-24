@@ -1,4 +1,4 @@
-package msku.ceng.mysecretdiary;
+package msku.ceng.mysecretdiary.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,23 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class DeleteUpdateActivity extends AppCompatActivity {
-    private Button deleteButton;
+import msku.ceng.mysecretdiary.R;
+
+public class SaveActivity extends AppCompatActivity {
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete_update);
+        setContentView(R.layout.activity_save);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
-        deleteButton = findViewById(R.id.delete_button);
-        deleteButton.setOnClickListener(new View.OnClickListener() {
+        button = findViewById(R.id.save);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),DeletedNoteActivity.class);
+                Intent intent = new Intent(v.getContext(),NotesActivity.class);
                 startActivity(intent);
             }
         });
