@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import msku.ceng.mysecretdiary.Dao.UserDao;
 
 @Database(entities = {UserEntity.class}, version = 1)
-public abstract class UserDatabase {
+public abstract class UserDatabase extends RoomDatabase{
 
     private static final String dbName = "user";
     private static UserDatabase userDatabase;
@@ -17,7 +17,7 @@ public abstract class UserDatabase {
     public static synchronized UserDatabase getUserDatabase(Context context){
 
         if (userDatabase == null){
-            userDatabase = Room.databaseBuilder(context, UserDatabase., dbName)
+            userDatabase = Room.databaseBuilder(context, UserDatabase.class, dbName)
                     .fallbackToDestructiveMigration()
                     .build();
         }

@@ -10,14 +10,11 @@ public class UserEntity {
     @PrimaryKey(autoGenerate = true)
     Integer id;
 
-    @ColumnInfo(name = "userId")
-    String userId;
+    @ColumnInfo(name = "emailAddress")
+    String emailAddress;
 
     @ColumnInfo(name= "password")
-        String password;
-
-    @ColumnInfo(name = "name")
-        String name;
+    String password;
 
     public Integer getId() {
         return id;
@@ -27,12 +24,12 @@ public class UserEntity {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public String getPassword() {
@@ -41,13 +38,5 @@ public class UserEntity {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
