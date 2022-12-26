@@ -86,10 +86,11 @@ public class SaveActivity extends AppCompatActivity {
         note.notesDate = todayDate;
         note.notesDetail = diaryDetail;
         note.notesMood = diaryMood;
-//        note.id = Integer.parseInt(todayDate);
         notesViewModel.insertNotes(note);
         Toast.makeText(this,"Today diary entry created succesffully",Toast.LENGTH_SHORT).show();
 
+
         finish();
+        System.out.println("save: " + note.id);
     }
 }

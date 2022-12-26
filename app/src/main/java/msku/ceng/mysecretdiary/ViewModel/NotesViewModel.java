@@ -33,6 +33,6 @@ public class NotesViewModel extends AndroidViewModel {
     };
 
     public void updateNotes(Notes notes){
-        repository.insertNotes(notes);
+        repository.updateNotes(notes);
     };
 }

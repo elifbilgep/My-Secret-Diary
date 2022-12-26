@@ -38,18 +38,15 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.notesViewHol
         holder.mood.setText(note.notesMood);
         holder.noteDetail.setText(note.notesDetail);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(notesActivity, UpdateActivity.class);
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(notesActivity, UpdateActivity.class);
 
-                intent.putExtra("id",note.id);
-                intent.putExtra("mood",note.notesMood);
-                intent.putExtra("noteDetail",note.notesDetail);
-                intent.putExtra("date",note.notesDate);
+            intent.putExtra("id",note.id);
+            intent.putExtra("mood",note.notesMood);
+            intent.putExtra("noteDetail",note.notesDetail);
+            intent.putExtra("date",note.notesDate);
 
-                notesActivity.startActivity(intent);
-            }
+            notesActivity.startActivity(intent);
         });
     }
 
