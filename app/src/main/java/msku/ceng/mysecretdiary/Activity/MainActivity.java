@@ -20,13 +20,20 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-        button = findViewById(R.id.enterButton);
+        button = (Button) findViewById(R.id.enterButtonMain);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),DeletedNoteActivity.class);
-                startActivity(intent);
+               Intent intent = new Intent(MainActivity.this,NotesActivity.class);
+             startActivity(intent);
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }
 }

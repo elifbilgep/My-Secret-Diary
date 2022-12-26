@@ -5,18 +5,18 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "DiaryDB")
+@Entity(tableName = "NotesDB")
 public class Notes {
     @PrimaryKey(autoGenerate = true)
     public int id;
 
-    @ColumnInfo(name = "diariesDate")
+    @ColumnInfo(name = "notesDate")
     public String notesDate;
 
-    @ColumnInfo(name = "diariesDetail")
+    @ColumnInfo(name = "noteDetail")
     public String notesDetail;
 
     @ColumnInfo(name = "mood")
-    public String notes;
+    public String notesMood;
 
 }

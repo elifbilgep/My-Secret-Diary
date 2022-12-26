@@ -1,10 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UpdateActivity">
+    android:background="@color/white">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:id="@+id/updateTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Your Diary"
+      android:textColor="@color/black"
+      android:textSize="40sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/updateDateText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.106"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.83"
+      app:textAllCaps="false" />
+
+  <view
+      android:id="@+id/updateDivider"
+      class="com.google.android.material.divider.MaterialDivider"
+      android:layout_width="350dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      app:dividerColor="@color/black"
+      app:dividerThickness="2dp"
+      app:layout_constraintBottom_toTopOf="@+id/updateMoodRadioGroup"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.393"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/updateDateText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="24/12/2023"
+      android:textColor="@color/black"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/updateDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.091"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+      android:id="@+id/updateDiaryEntry"
+      android:layout_width="346dp"
+      android:layout_height="300dp"
+      android:layout_marginBottom="60dp"
+      android:background="@drawable/custom_input"
+      android:elevation="5dp"
+      android:gravity="top|start"
+      android:hint="Diary Detail"
+      android:inputType="text"
+      android:minWidth="300dp"
+      android:minHeight="300dp"
+      android:padding="10dp"
+      app:layout_constraintBottom_toTopOf="@+id/updateSaveButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/updateSaveButton"
+      android:layout_width="350dp"
+      android:layout_height="70dp"
+      android:layout_marginBottom="36dp"
+      android:text="Save"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.524"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <RadioGroup
+      android:id="@+id/updateMoodRadioGroup"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:orientation="horizontal"
+      android:paddingStart="20dp"
+      android:paddingEnd="20dp"
+      app:layout_constraintBottom_toTopOf="@+id/updateDiaryEntry"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <RadioButton
+        android:id="@+id/updateHappyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Happy" />
+
+    <RadioButton
+        android:id="@+id/updateSadCheckBox"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:text="Sad" />
+
+    <RadioButton
+        android:id="@+id/updateAngryCheckBox"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Angry" />
+
+    <RadioButton
+        android:id="@+id/updateExcitedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Excited" />
+  </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
