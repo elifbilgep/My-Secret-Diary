@@ -16,16 +16,16 @@ public class NotesRepository {
 
 
     public NotesRepository(Application application){
-        NotesDatabase database = NotesDatabase.getDatabaseInstance(application.getApplicationContext());
+        NotesDatabase database = NotesDatabase.getDatabaseInstance(application);
         notesDao = database.notesDao();
         getAllNotes  = notesDao.getAllNotes();
     }
 
-   public   void insertNotes(Notes notes){
+   public void insertNotes(Notes notes){
         notesDao.insertNotes(notes);
     }
 
-    public void deleteNotes(int id){
+   public void deleteNotes(int id){
         notesDao.deleteNotes(id);
     }
 

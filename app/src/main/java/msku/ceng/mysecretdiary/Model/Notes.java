@@ -13,10 +13,10 @@ public class Notes {
     @ColumnInfo(name = "notesDate")
     public String notesDate;
 
-    @ColumnInfo(name = "notesDetail")
+    @ColumnInfo(name = "noteDetail")
     public String notesDetail;
 
-    @ColumnInfo(name = "categoryName")
-    public   String categoryName;
+    @ColumnInfo(name = "mood")
+    public String notesMood;
 
 }

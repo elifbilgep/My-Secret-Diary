@@ -11,12 +11,13 @@ import msku.ceng.mysecretdiary.Model.Notes;
 
 @androidx.room.Dao
 public interface NotesDao {
+
     @Query("SELECT * FROM NotesDB")
-    LiveData<List<Notes> >getAllNotes();
+    LiveData<List<Notes>> getAllNotes();
 
 
-    @Query("SELECT * FROM NotesDB WHERE categoryName= :categoryName ")
-     List<Notes> getAllNotesAccCategory(String categoryName);
+    @Query("SELECT * FROM NotesDB WHERE mood= :mood ")
+     List<Notes> getAllNotesAccMood(String mood);
 
     @Insert
     void insertNotes(Notes... note);
