@@ -10,10 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySecretDiary" >
         <activity
-            android:name=".Activity.UpdateActivity"
-            android:exported="false" />
+            android:name=".Activity.ui.ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.MySecretDiary.NoActionBar" />
         <activity
-            android:name=".Activity.DeleteUpdateActivity"
+            android:name=".Activity.DrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/Theme.MySecretDiary.NoActionBar" />
+        <activity
+            android:name=".Activity.UpdateActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SaveActivity"

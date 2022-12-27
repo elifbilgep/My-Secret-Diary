@@ -6,76 +6,18 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
-  <TextView
-      android:id="@+id/updateTitle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Your Diary"
-      android:textColor="@color/black"
-      android:textSize="40sp"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toTopOf="@+id/updateDateText"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.106"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.83"
-      app:textAllCaps="false" />
-
   <view
       android:id="@+id/updateDivider"
       class="com.google.android.material.divider.MaterialDivider"
       android:layout_width="350dp"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="24dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="12dp"
       app:dividerColor="@color/black"
       app:dividerThickness="2dp"
       app:layout_constraintBottom_toTopOf="@+id/updateMoodRadioGroup"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.393"
-      app:layout_constraintStart_toStartOf="parent" />
-
-  <TextView
-      android:id="@+id/updateDateText"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="24/12/2023"
-      android:textColor="@color/black"
-      android:textSize="28sp"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toTopOf="@+id/updateDivider"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.091"
-      app:layout_constraintStart_toStartOf="parent" />
-
-  <EditText
-      android:id="@+id/updateDiaryEntry"
-      android:layout_width="346dp"
-      android:layout_height="300dp"
-      android:layout_marginBottom="60dp"
-      android:background="@drawable/custom_input"
-      android:elevation="5dp"
-      android:gravity="top|start"
-      android:hint="Diary Detail"
-      android:inputType="text"
-      android:minWidth="300dp"
-      android:minHeight="300dp"
-      android:padding="10dp"
-      app:layout_constraintBottom_toTopOf="@+id/updateSaveButton"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.492"
-      app:layout_constraintStart_toStartOf="parent" />
-
-  <Button
-      android:id="@+id/updateSaveButton"
-      android:layout_width="350dp"
-      android:layout_height="70dp"
-      android:layout_marginBottom="36dp"
-      android:text="Save"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.524"
       app:layout_constraintStart_toStartOf="parent" />
 
   <RadioGroup
@@ -87,9 +29,7 @@
       android:paddingStart="20dp"
       android:paddingEnd="20dp"
       app:layout_constraintBottom_toTopOf="@+id/updateDiaryEntry"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent">
+      tools:layout_editor_absoluteX="0dp">
 
     <RadioButton
         android:id="@+id/updateHappyCheckBox"
@@ -117,5 +57,88 @@
         android:layout_weight="1"
         android:text="Excited" />
   </RadioGroup>
+
+  <TextView
+      android:id="@+id/updateTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:text="Your Diary"
+      android:textColor="@color/black"
+      android:textSize="40sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/updateDateText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.137"
+      app:layout_constraintStart_toStartOf="parent"
+      app:textAllCaps="false" />
+
+  <TextView
+      android:id="@+id/updateDateText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:text="24/12/2023"
+      android:textColor="@color/black"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/updateDivider"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.118"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="60dp"
+      android:gravity="top|start"
+      android:layout_marginHorizontal="20dp"
+      android:minLines = "15"
+      android:inputType="textMultiLine"
+      android:id="@+id/updateDiaryEntry"
+      android:minWidth="300dp"
+      android:minHeight="300dp"
+      android:padding="10dp"
+      app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.492"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="0dp"
+      android:layout_height="75dp"
+      android:layout_marginBottom="44dp"
+      android:orientation="horizontal"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="Delete"
+        app:backgroundTint="#CF0E00" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Update" />
+  </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
