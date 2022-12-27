@@ -5,11 +5,21 @@
       <map>
         <entry key="app/src/main/res/drawable/custom_input.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/custom_note.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/filter_selected_shape.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/filter_shape.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.194" />
+        <entry key="app/src/main/res/layout/activity_delete_update.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_notes.xml" value="0.31875" />
         <entry key="app/src/main/res/layout/activity_save.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_update.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/app_bar_drawer.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/content_drawer.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/item_notes.xml" value="0.25" />
       </map>
     </option>

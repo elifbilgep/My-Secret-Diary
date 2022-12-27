@@ -31,6 +31,8 @@ public class UpdateActivity extends AppCompatActivity {
         binding = ActivityUpdateBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+
         notesViewModel = ViewModelProviders.of(this).get(NotesViewModel.class);
 
         iId = getIntent().getIntExtra("id",0);
@@ -61,8 +63,13 @@ public class UpdateActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
+        binding.deleteButton.setOnClickListener(v -> {
+            notesViewModel.deleteNotes(iId);
+            finish();
+        });
         
-        binding.updateSaveButton.setOnClickListener(v -> {
+        binding.updateButton.setOnClickListener(v -> {
           
                 int radioButtonID = binding.updateMoodRadioGroup.getCheckedRadioButtonId();
                 View radioButton = binding.updateMoodRadioGroup.findViewById(radioButtonID);
@@ -75,6 +82,7 @@ public class UpdateActivity extends AppCompatActivity {
             }
         );
     }
+
 
     private void UpdateNotes(String sDate, String diaryMood, String diaryDetail) {
 
@@ -91,6 +99,7 @@ public class UpdateActivity extends AppCompatActivity {
             finish();
 
     }
+
 
 
 }

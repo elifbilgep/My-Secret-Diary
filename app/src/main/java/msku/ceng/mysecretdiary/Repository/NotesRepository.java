@@ -13,12 +13,20 @@ import msku.ceng.mysecretdiary.Model.Notes;
 public class NotesRepository {
     public NotesDao notesDao;
     public LiveData<List<Notes>> getAllNotes;
+    public LiveData<List<Notes>> getAllNotesHappy;
+    public LiveData<List<Notes>> getAllNotesSad;
+    public LiveData<List<Notes>> getAllNotesAngry;
+    public LiveData<List<Notes>> getAllNotesExcited;
 
 
     public NotesRepository(Application application){
         NotesDatabase database = NotesDatabase.getDatabaseInstance(application);
         notesDao = database.notesDao();
         getAllNotes  = notesDao.getAllNotes();
+        getAllNotesHappy = notesDao.getAllNotesHappy();
+        getAllNotesSad = notesDao.getAllNotesSad();
+        getAllNotesAngry = notesDao.getAllNotesAngry();
+        getAllNotesExcited = notesDao.getAllNotesExcited();
     }
 
    public void insertNotes(Notes notes){
@@ -32,4 +40,6 @@ public class NotesRepository {
    public  void updateNotes(Notes notes){
         notesDao.updateNotes(notes);
     }
+
+
 }
