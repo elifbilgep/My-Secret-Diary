@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }).start();
                 }else{
-                    Toast.makeText(getApplicationContext(), "Fill all the fileds!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Fill all the fields!", Toast.LENGTH_SHORT).show();
                 }
 
                 Intent intent = new Intent(v.getContext(),MainActivity.class);
