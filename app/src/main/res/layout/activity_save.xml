@@ -11,23 +11,51 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:text="Your Diary"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintBottom_toTopOf="@+id/dateText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        app:textAllCaps="false" />
+
+    <view
+        android:id="@+id/divider"
+        class="com.google.android.material.divider.MaterialDivider"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:dividerColor="@color/black"
+        app:dividerThickness="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/moodRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24/12/2023"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextInput"
-        android:layout_width="350dp"
-        android:layout_height="360dp"
-
-        android:layout_marginBottom="39dp"
+        android:id="@+id/diaryEntry"
+        android:layout_width="346dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/custom_input"
+        android:elevation="5dp"
         android:ems="10"
         android:gravity="top|start"
         android:hint="Diary Detail"
@@ -36,34 +64,61 @@
         android:minWidth="300dp"
         android:minHeight="300dp"
         android:minLines="6"
-        app:layout_constraintBottom_toTopOf="@+id/save"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="date"
-        android:minWidth="300dp"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextInput"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/save"
+        android:id="@+id/saveButton"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:layout_marginBottom="36dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <RadioGroup
+        android:id="@+id/moodRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/diaryEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/happCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy" />
+
+        <RadioButton
+            android:id="@+id/sadCheckBox"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="Sad" />
+
+        <RadioButton
+            android:id="@+id/angryCheckBox"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Angry" />
+
+        <RadioButton
+            android:id="@+id/excitedCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Excited" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
