@@ -14,13 +14,24 @@
         <entry key="app/src/main/res/layout/activity_delete_update.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_drawer.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
-        <entry key="app/src/main/res/layout/activity_notes.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/activity_notes.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.31875" />
         <entry key="app/src/main/res/layout/activity_save.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_update.xml" value="0.31875" />
         <entry key="app/src/main/res/layout/app_bar_drawer.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/content_drawer.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/content_profile.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/content_profile2.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_person.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_notes.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.31875" />
+        <entry key="app/src/main/res/menu/drawer.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.1765625" />
       </map>
     </option>
   </component>
