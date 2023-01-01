@@ -21,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     EditText emailAddress,oldPassword, newPassword;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,9 @@ public class SettingsActivity extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), "Password has changed!", Toast.LENGTH_SHORT).show();
                                     }
                                 });
+
+                                Intent i = new Intent(SettingsActivity.this,MainActivity.class);
+                                startActivity(i);
 
                             }
                         }
