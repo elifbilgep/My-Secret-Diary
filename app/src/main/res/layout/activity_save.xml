@@ -28,7 +28,7 @@
         class="com.google.android.material.divider.MaterialDivider"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         app:dividerColor="@color/black"
         app:dividerThickness="2dp"
         app:layout_constraintBottom_toTopOf="@+id/moodRadioGroup"
@@ -116,5 +116,15 @@
             android:layout_weight="1"
             android:text="Excited" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
