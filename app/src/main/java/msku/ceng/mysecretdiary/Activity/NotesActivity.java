@@ -63,7 +63,7 @@ public class NotesActivity extends AppCompatActivity{
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(NotesActivity.this,ProfileActivity.class);
+                Intent i = new Intent(NotesActivity.this, ProfileActivity.class);
                 startActivity(i);
             }
         });
@@ -71,11 +71,10 @@ public class NotesActivity extends AppCompatActivity{
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(NotesActivity.this,SettingsActivity.class);
+                Intent i = new Intent(NotesActivity.this, SettingsActivity.class);
                 startActivity(i);
             }
         });
-
 
 
         noFilter.setBackgroundResource(R.drawable.filter_selected_shape);//select the no filter first
@@ -128,14 +127,10 @@ public class NotesActivity extends AppCompatActivity{
         saveButton.setOnClickListener(new View.OnClickListener() {//the function when add button pressed
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(),SaveActivity.class);
+                Intent intent = new Intent(v.getContext(), SaveActivity.class);
                 startActivity(intent);
             }
         });
-
-
-
-
 
 
         notesViewModel.getAllNotes.observe(this, new Observer<List<Notes>>() {
@@ -147,42 +142,42 @@ public class NotesActivity extends AppCompatActivity{
 
 
 
-
-    public void setAdapter(List<Notes> notes){
+    }
+    public void setAdapter(List<Notes> notes) {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        notesAdapter = new NotesAdapter(NotesActivity.this,notes);
+        notesAdapter = new NotesAdapter(NotesActivity.this, notes);
         recyclerView.setAdapter(notesAdapter);
     }
     private void loadData(int i){
-        if(i == 0){
+        if (i == 0) {
             notesViewModel.getAllNotes.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);
                 }
             });
-        }else if(i == 1){
+        } else if (i == 1) {
             notesViewModel.getHappyNotes.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);
                 }
             });
-        }else if(i == 2){
+        } else if (i == 2) {
             notesViewModel.getSadNotes.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);
                 }
             });
-        }else if(i == 3){
+        } else if (i == 3) {
             notesViewModel.getAngryNotes.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
                     setAdapter(notes);
                 }
             });
-        }else if(i == 4){
+        } else if (i == 4) {
             notesViewModel.getExcitedNotes.observe(this, new Observer<List<Notes>>() {
                 @Override
                 public void onChanged(List<Notes> notes) {
@@ -193,5 +188,4 @@ public class NotesActivity extends AppCompatActivity{
 
 
     }
-
 }

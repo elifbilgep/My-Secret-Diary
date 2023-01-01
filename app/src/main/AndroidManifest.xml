@@ -10,17 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySecretDiary">
         <activity
-            android:name=".Activity.ProfileActivity"
+            android:name=".Activity.SettingsActivity"
             android:exported="false"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.MySecretDiary.NoActionBar" />
         <activity
-            android:name=".Activity.DrawerActivity"
-            android:exported="false"
-            android:label="@string/title_activity_drawer"
-            android:theme="@style/Theme.MySecretDiary.NoActionBar" />
-        <activity
-            android:name=".Activity.ui.ProfileActivity"
+            android:name=".Activity.ProfileActivity"
             android:exported="false"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.MySecretDiary.NoActionBar" />
