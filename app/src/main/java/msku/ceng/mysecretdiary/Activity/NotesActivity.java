@@ -113,6 +113,7 @@ public class NotesActivity extends AppCompatActivity{
             happyFilter.setBackgroundResource(R.drawable.filter_shape);
             excitedFilter.setBackgroundResource(R.drawable.filter_shape);
 
+
         });
         excitedFilter.setOnClickListener(v -> {
             loadData(4);
@@ -122,6 +123,7 @@ public class NotesActivity extends AppCompatActivity{
             happyFilter.setBackgroundResource(R.drawable.filter_shape);
             angryFilter.setBackgroundResource(R.drawable.filter_shape);
         });
+
 
         saveButton.setOnClickListener(new View.OnClickListener() {//the function when add button pressed
             @Override
@@ -134,13 +136,14 @@ public class NotesActivity extends AppCompatActivity{
 
 
 
+
+
         notesViewModel.getAllNotes.observe(this, new Observer<List<Notes>>() {
             @Override
             public void onChanged(List<Notes> notes) {
                 setAdapter(notes);
             }
         });
-    }
 
 
 

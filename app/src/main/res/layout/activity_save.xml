@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83"
+        app:layout_constraintVertical_bias="1.0"
         app:textAllCaps="false" />
 
     <view
@@ -28,7 +28,7 @@
         class="com.google.android.material.divider.MaterialDivider"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         app:dividerColor="@color/black"
         app:dividerThickness="2dp"
         app:layout_constraintBottom_toTopOf="@+id/moodRadioGroup"
@@ -40,6 +40,7 @@
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:text="24/12/2023"
         android:textColor="@color/black"
         android:textSize="28dp"
@@ -51,19 +52,14 @@
 
     <EditText
         android:id="@+id/diaryEntry"
-        android:layout_width="346dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
-        android:background="@drawable/custom_input"
-        android:elevation="5dp"
-        android:ems="10"
         android:gravity="top|start"
+        android:layout_marginHorizontal="20dp"
+        android:minLines = "15"
         android:hint="Diary Detail"
-        android:inputType="text"
-        android:lines="50"
-        android:minWidth="300dp"
-        android:minHeight="300dp"
-        android:minLines="6"
+        android:inputType="textMultiLine"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,5 +116,15 @@
             android:layout_weight="1"
             android:text="Excited" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

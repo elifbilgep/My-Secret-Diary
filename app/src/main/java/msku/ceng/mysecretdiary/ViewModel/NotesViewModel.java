@@ -15,6 +15,11 @@ public class NotesViewModel extends AndroidViewModel {
 
     public NotesRepository repository;
     public LiveData<List<Notes>> getAllNotes;
+    public LiveData<List<Notes>> getHappyNotes;
+    public LiveData<List<Notes>> getSadNotes;
+    public LiveData<List<Notes>> getAngryNotes;
+    public LiveData<List<Notes>> getExcitedNotes;
+
 
 
     public NotesViewModel(@NonNull Application application) {
@@ -22,6 +27,10 @@ public class NotesViewModel extends AndroidViewModel {
 
          repository = new NotesRepository(application);
          getAllNotes = repository.getAllNotes;
+         getHappyNotes = repository.getAllNotesHappy;
+         getSadNotes = repository.getAllNotesSad;
+         getAngryNotes = repository.getAllNotesAngry;
+         getExcitedNotes = repository.getAllNotesExcited;
     }
 
     public void insertNotes(Notes notes){
@@ -33,6 +42,6 @@ public class NotesViewModel extends AndroidViewModel {
     };
 
     public void updateNotes(Notes notes){
-        repository.insertNotes(notes);
+        repository.updateNotes(notes);
     };
 }

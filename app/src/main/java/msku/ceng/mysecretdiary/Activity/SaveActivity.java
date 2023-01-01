@@ -78,18 +78,23 @@ public class SaveActivity extends AppCompatActivity {
             }
         });
 
+        binding.backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
+
 
     private void createNotes(String todayDate,String diaryMood,String diaryDetail){
         Notes note  = new Notes();
         note.notesDate = todayDate;
         note.notesDetail = diaryDetail;
         note.notesMood = diaryMood;
-//        note.id = Integer.parseInt(todayDate);
         notesViewModel.insertNotes(note);
         Toast.makeText(this,"Today diary entry created succesffully",Toast.LENGTH_SHORT).show();
 
-        finish();
     }
 }
