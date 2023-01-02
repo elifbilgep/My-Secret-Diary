@@ -12,6 +12,9 @@ public interface UserDao {
     @Insert
     void registerUser(UserEntity userEntity);
 
-    @Query("SELECT * from users where emailAddress=(:emailAddress) and password=(:password)")
+    @Query("SELECT * FROM users WHERE emailAddress=(:emailAddress) AND password=(:password)")
     UserEntity login(String emailAddress, String password);
+
+/*    @Query("SELECT * FROM users ORDER BY id DESC LIMIT 10")
+    UserEntity getLast10Users();*/
 }
