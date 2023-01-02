@@ -51,7 +51,7 @@
         android:id="@+id/notesRecycler"
         android:layout_width="399dp"
         android:layout_height="435dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/save_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
