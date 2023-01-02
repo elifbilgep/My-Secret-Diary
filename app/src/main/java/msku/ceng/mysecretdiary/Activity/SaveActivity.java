@@ -37,6 +37,7 @@ public class SaveActivity extends AppCompatActivity {
     NotesViewModel notesViewModel;
     CoordinatorLayout coordinatorLayout;
 
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,13 +89,21 @@ public class SaveActivity extends AppCompatActivity {
     }
 
 
+
     private void createNotes(String todayDate,String diaryMood,String diaryDetail){
-        Notes note  = new Notes();
-        note.notesDate = todayDate;
-        note.notesDetail = diaryDetail;
-        note.notesMood = diaryMood;
-        notesViewModel.insertNotes(note);
+        Thread thread = new Thread(){
+            public void run(){
+                Notes note  = new Notes();
+                note.notesDate = todayDate;
+                note.notesDetail = diaryDetail;
+                note.notesMood = diaryMood;
+                notesViewModel.insertNotes(note);
+
+            }
+        };
         Toast.makeText(this,"Today diary entry created succesffully",Toast.LENGTH_SHORT).show();
+        thread.start();
+
 
     }
 }
